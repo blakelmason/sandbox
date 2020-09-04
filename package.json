@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "git": "git add . && git commit -m \"commit on `date +'%Y-%m-%d %H:%M:%S'`\" && git push origin master"
+    "dev": "ts-node-dev --respawn --transpile-only ./server/index.ts",
+    "prod": "tsc && node ./build/app.js",
+    "tsc": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -16,5 +19,11 @@
   "bugs": {
     "url": "https://github.com/blakelmason/sandbox/issues"
   },
-  "homepage": "https://github.com/blakelmason/sandbox#readme"
+  "homepage": "https://github.com/blakelmason/sandbox#readme",
+  "dependencies": {
+    "@types/express": "^4.17.8",
+    "express": "^4.17.1",
+    "ts-node-dev": "^1.0.0-pre.62",
+    "typescript": "^4.0.2"
+  }
 }
